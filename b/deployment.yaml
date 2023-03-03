@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-b
+  namespace: debug-b
+spec:
+  selector:
+    matchLabels:
+      app: test-b
+  template:
+    metadata:
+      labels:
+        app: test-b
+    spec:
+      containers:
+      - name: test-b
+        image: nginx:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
