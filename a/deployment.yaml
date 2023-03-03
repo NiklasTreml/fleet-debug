@@ -19,10 +19,4 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-      - name: other-container
-        image: busybox:latest
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         command: ["sleep", "infinity"]
