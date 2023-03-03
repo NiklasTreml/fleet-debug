@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: test-a
-  namespace: debug-a
+  namespace: debug-b
 spec:
   selector:
     matchLabels:
