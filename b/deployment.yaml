@@ -21,3 +21,10 @@ spec:
             cpu: "250m"
         ports:
         - containerPort: 80
+      - name: other-container
+        image: busybox:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        command: ["sleep", "infinity"]
